@@ -5,9 +5,33 @@
 
 <h1>SVG Elements in HTML</h1>
 <p> SVG is an XML-based markup language for describing two-dimensional based vector graphics. It can be embedded in HTML, generated or manipulated in Javascript, or in libraries like D3JS</p>
-<p> SVG is  </p>
+
+<p><b>SVG Introduction:</b></p>
+
 <svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="red" stroke-width="4" fill="yellow" />
+</svg>
+
+<ul>
+  <li>An SVG image begins with an &lt;svg&gt; element</li>
+  <li>The width and height attributes of the &lt;svg&gt; element define the width and height of the SVG image</li>
+  <li>The &lt;circle&gt; element is used to draw a circle</li><li>The cx and cy attributes define the x and y coordinates of the center of the circle within the SVG image. If cx and cy are 
+    not set, the circle's center is set to (0, 0)</li><li>The r attribute defines the radius of the circle
+    </li><li>The stroke and stroke-width attributes control how the outline of a shape appears. We set the outline of the circle to a 4px green "border"</li>
+  <li>The fill attribute refers to the color inside the circle. We set the fill color to yellow</li>
+  <li>The closing &lt;/svg&gt; tag closes the SVG image</li>
+</ul>
+
+<p><b>SVG Lines:</b></p>
+<ul>
+  <li>SVG &lt;line&gt; defines a line segment between two points</li>
+  <li></li>
+</ul>
+<svg width="100" height="100">
+  <line x1="5" y1="10" x2="99" y2="30" stroke-width=".5" stroke="red"/>
+  <line x1="5" y1="30" x2="99" y2="50" stroke-width="1" stroke="red" stroke-dasharray="8,3,2,18"./>
+  <line x1="5" y1="50" x2="99" y2="70" stroke-width="2.5" stroke="red"/>
+  <line x1="5" y1="70" x2="99" y2="90" stroke-width="4" stroke="blue" stroke-linecap="round"/>
 </svg>
 
 </body>
