@@ -3,10 +3,39 @@
 <html>
 <body>
 
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+    <rect class="mouse" x="0" y="0" width="800" height="300"/>
+    <polygon class="diamondTu tulip" points="400, 280, 310, 150, 400, 20, 490, 150"/>
+    <style>
+        .mouse { fill: #E5E4E3; }
+        .tulip { fill: #CC2954; }
+        .diamondTu {
+            animation-name: diamondTurns;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            transform-origin: 50% 50%;
+            animation-timing-function: ease;
+        }
+        @keyframes diamondTurns {
+            0%   { transform: rotate(0deg); }
+            50%  { transform: rotate(-90deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</svg>
+
 <h1>SVG Elements in HTML</h1>
 <p> SVG is an XML-based markup language for describing two-dimensional based vector graphics. It can be embedded in HTML, generated or manipulated in Javascript, or in libraries like D3JS</p>
 
 <p><b>SVG Introduction:</b></p>
+
+<pre class="line-numbers">
+  <code class="language-markup">
+    &lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;
+      &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;red&quot; stroke-width=&quot;4&quot; fill=&quot;yellow&quot; /&gt;
+    &lt;/svg&gt;
+  </code>
+</pre>
 
 <svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="red" stroke-width="4" fill="yellow" />
@@ -22,12 +51,18 @@
   <li>The closing &lt;/svg&gt; tag closes the SVG image</li>
 </ul>
 
-<p><b><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linem">SVG Lines</a></b></p>
-<p>SVG &lt;line&gt; defines a line segment between two points.  Line properties include:</p>
+<p><b><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line">SVG Lines</a></b></p>
+<p>SVG &lt;line&gt; defines a line segment between two points.</p>  
+<pre class="line-numbers">
+  <code class="language-markup">
+    &lt;line x1=&quot;5&quot; y1=&quot;5&quot; stroke=&quot;red&quot; x2=&quot;90&quot; y2=&quot;90&quot; /&gt;
+  </code>
+</pre>
+<p>Line properties include:</p>
 <ul>
-  <li>stroke-width: stroke defining line color, stroke-linecap, </li>
-  <li>stroke: line color</li>
-  <li>stroke-linecap: , </li>
+  <li>stroke-width</li>
+  <li>stroke: specificing line color</li>
+  <li>stroke-linecap: can have vlues butt, round, and square </li>
 </ul>
 <svg width="100" height="100">
   <line x1="5" y1="10" x2="99" y2="30" stroke-width=".5" stroke="red"/>
@@ -35,6 +70,41 @@
   <line x1="5" y1="50" x2="99" y2="70" stroke-width="2.5" stroke="red"/>
   <line x1="5" y1="70" x2="99" y2="90" stroke-width="4" stroke="blue" stroke-linecap="round"/>
 </svg>
+
+<p><b>Create additional lines in the preceeding SVG</b></p>
+<p> </p>
+
+<p><b><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect">SVG Rectangle</a></b></p>
+<p>SVG &lt;rect&gt; defines a rectangle by top-left poxition, width, and height</p>
+
+<pre class="line-numbers">
+  <code class="language-markup">
+   &lt;rect x=&quot;25&quot; y=&quot;25&quot; height=&quot;50&quot; width=&quot;70&quot;/&gt;
+  </code>
+</pre>
+<p>Rectangle properties include:</p>
+<ul>
+  <li>stroke-width: stroke defining line color, stroke-linecap, </li>
+  <li>stroke: line color</li>
+  <li>fill </li>
+  <li>rx and ry corner radius </li>
+</ul>
+<svg viewBox="0 0 220 75">
+  <rect x="10" y="10" height="55" width="70" fill="rgb(100%,50%,50%)" stroke="black" stroke-width="2"/>
+  <rect x="120" y="20" width="80" height="50" rx="15" fill="rgb(25%,50%,75%)" stroke="black" stroke-dasharray="8,4,2,4"/>
+</svg>
+
+<p><b>Create your own rectangle inside the left retangle and outside the right rectangle</b></p>
+
+<p> </p>
+
+<p><b><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element">SVG Elements</a></b></p>
+<p>Many other SVG elements are avaliable includeing ellipse, text, polygon, polyline, image, and animate.  Add 3 new elements to the following SVG.</p>
+<svg viewBox="0 0 200 200">
+
+</svg>
+
+Now with these basics, now follow this <a href="https://artificial.design/archives/2018/05/23/svg-animation.html">SVG annomation tutorial</a>. 
 
 </body>
 </html>
