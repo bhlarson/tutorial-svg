@@ -93,14 +93,16 @@ Now with these basics, now follow this <a href="https://artificial.design/archiv
         .tulip { fill: #CC2954; }
         .diamondTu {
             animation-name: diamondTurns;
-            animation-duration: 4s;
+            animation-duration: 8s;
             animation-iteration-count: infinite;
             transform-origin: 50% 50%;
             animation-timing-function: ease;
         }
         @keyframes diamondTurns {
             0%   { transform: rotate(0deg); }
-            50%  { transform: rotate(-90deg); }
+            25%  { transform: translate(-100px, 0) rotate(-90deg) scale(0.5); }
+            50%  { transform: rotate(0deg) translate(0, 0); }
+            75% { transform: translate(+100px, 0) rotate(90deg) scale(1.5); }
             100% { transform: rotate(0deg); }
         }
     </style>
